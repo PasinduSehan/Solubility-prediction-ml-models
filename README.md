@@ -1,41 +1,42 @@
 "# Random-forest-regression-model" 
-# 🧠 Machine Learning Project – Random Forest Regression
+# 🧪 Solubility Prediction Using Machine Learning
 
-This project demonstrates the use of a **Random Forest Regressor** to predict target values using a given dataset. The model is trained, evaluated, and visualized using Python and Jupyter Notebook.
+This project demonstrates how to build and evaluate regression models to predict the solubility (`logS`) of chemical compounds based on molecular descriptors. The dataset is sourced from [Data Professor's GitHub repository](https://github.com/dataprofessor/data), and the models are built using Scikit-learn in Python.
 
 ---
 
-## 📂 Project Files
+## 📁 Dataset
 
-- `ML_second_project.ipynb` – Main Jupyter Notebook with data loading, preprocessing, training, and evaluation.
-- `README.md` – Project overview and instructions.
+**Source**: [Delaney solubility dataset](https://github.com/dataprofessor/data/blob/master/delaney_solubility_with_descriptors.csv)  
+- **Target**: `logS` (log solubility)
+- **Features**: Molecular descriptors
 
 ---
 
 ## ⚙️ Technologies Used
 
 - Python
-- Scikit-learn
 - Pandas
-- Matplotlib / Seaborn (if plotting included)
+- Scikit-learn
 - Jupyter Notebook
+- Matplotlib (optional for plots)
+
+---
+
+## 🧠 Machine Learning Models
+
+1. **Linear Regression**
+2. **Random Forest Regressor**
+
+Each model is trained using an 80-20 train-test split, and evaluated using:
+
+- Mean Squared Error (MSE)
+- R-squared (R²)
 
 ---
 
 ## 📊 Model Evaluation
 
-The model is evaluated using:
-
-- **Mean Squared Error (MSE)**
-- **R-squared (R²) Score**
-
+### 📌 Evaluation Metrics Used
 ```python
 from sklearn.metrics import mean_squared_error, r2_score
-
-# Training Set Evaluation
-rf_train_mse = mean_squared_error(y_train, y_rf_train_pred)
-rf_train_r2 = r2_score(y_train, y_rf_train_pred)
-
-# Testing Set Evaluation
-rf_test_mse = mean_squared_error(y_test, y_rf_test_pred)
-rf_test_r2 = r2_score(y_test, y_rf_test_pred)
